@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    color: rgb(78, 78, 78);
+  }
+
+  header {
+    background-color: rgb(137, 208, 255);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: space-between;  
+
+  }
+  
+  header h1 {
+      padding-left: 20px;
+      align-self: center;
+  }
+
+  .wrapheader {
+      padding-right: 20px;
+      justify-self: end;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 10px;
+      
+  }
+
+  .bell {
+    align-self: center;
+    height: 30px;
+    width: 30px;
+    fill: white;
+}
+
+  .pro-pic {
+      align-self: center;
+      border-radius: 50%;
+      width: 50px;
+  }
+  header h3 {
+      align-self: center;
+  }
+
+  nav {
+    fill: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(58, 72, 151);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+  }
+
+// .navs {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr 1fr;  
+//     column-gap: 35px;
+// }
+  .dashboard {
+      color: black;
+  }
