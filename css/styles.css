@@ -2,6 +2,9 @@ body {
   margin: 0;
   color: #4e4e4e;
   font-family: "Roboto", sans-serif;
+  display: grid;
+  grid-template-areas: "header" "nav1" "main";
+  grid-template-columns: 1fr;
 }
 
 header {
@@ -10,6 +13,7 @@ header {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   justify-content: space-between;
+  grid-area: header;
 }
 
 header h1 {
@@ -61,6 +65,7 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
+  grid-area: nav1;
 }
 
 nav svg {
@@ -76,6 +81,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
+  grid-area: main;
 }
 
 .search input {
@@ -96,6 +102,28 @@ main {
 .message-to-send {
   margin-bottom: 20px;
   font-size: 1.1em;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    grid-template-areas: "header header" "nav1 main" "nav1 main";
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 80px auto;
+  }
+
+  nav {
+    grid-template-columns: 1fr;
+    height: 100vh;
+    padding: 0;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .message {
+    grid-column: span 1;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
