@@ -29,23 +29,34 @@ body {
 
   .bell {
     align-self: center;
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     fill: white;
-   
+    transition: .3s ease-out;
+    &:hover {
+        transform: scale(1.2);
+    }
+    
 }
 
   .pro-pic {
       align-self: center;
       border-radius: 50%;
       width: 50px;
-  }
-  header h3 {
-      align-self: center;
+      border: solid 2px rgb(165, 165, 165);
+      transition: .3s ease-out;
+      &:hover {
+          transform: scale(1.2);
+      }
   }
 
+
+  header h3 {
+      align-self: center;
+      color: rgb(255, 255, 255);
+  }
+ 
   nav {
-    fill: white;
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 10px;
@@ -55,12 +66,38 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
   }
+nav svg {
+    fill: white;
+}
 
-// .navs {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr 1fr 1fr;  
-//     column-gap: 35px;
-// }
-  .dashboard {
-      color: black;
-  }
+
+.thisisfuckingretarded {
+    height:10px;
+    width:10px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.search input {
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+
+.search-user {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    width: 100%;
+}
+
+.message {
+    grid-column: span 2;
+}
+
+.message-to-send {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
