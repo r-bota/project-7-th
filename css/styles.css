@@ -8,6 +8,7 @@ body {
 }
 
 header {
+  padding-bottom: 5px;
   background-color: #89d0ff;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -41,7 +42,7 @@ header h1 {
 }
 
 .pro-pic {
-  margin-top: 8px;
+  margin-top: 9px;
   border-radius: 50%;
   width: 35px;
   border: solid 2px #a5a5a5;

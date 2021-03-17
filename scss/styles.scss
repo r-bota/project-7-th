@@ -12,6 +12,7 @@ body {
   }
 
   header {
+      padding-bottom: 5px;
     background-color: rgb(137, 208, 255);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -46,7 +47,7 @@ body {
 }
 
   .pro-pic {
-      margin-top: 8px;
+      margin-top: 9px;
       border-radius: 50%;
       width: 35px;
       border: solid 2px rgb(165, 165, 165);
