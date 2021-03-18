@@ -62,10 +62,11 @@ body {
   }
  
   nav {
-    height: 40px;
+    
     padding-top: 7px;
     background-color: rgb(58, 72, 151);
     display: grid;
+    grid-template-rows: 40px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
     grid-area: nav1;
@@ -79,21 +80,48 @@ main {
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     grid-area: main;
+    grid-template-areas: 
+    "dashboard search"
+    "alert alert"
+    "traffic traffic"
+    "daily daily"
+    "mobile mobile"
+    "settings settings";
 }
-
+.dash {
+    grid-area: dashboard;
+}
 .search input {
+    grid-area: search;
     margin-top: 20px;
     font-size: 1.3rem;
+}
+
+.alert {
+    grid-area: alert;
+}
+
+.traffic {
+    grid-area: traffic;
+}
+
+.daily {
+    grid-area: daily;
+}
+
+.mobile {
+    grid-area: mobile;
+}
+
+.message {
+    grid-area: message;
+    grid-column: span 2;
 }
 
 .search-user {
     margin-bottom: 10px;
     font-size: 1.1em;
     width: 100%;
-}
-
-.message {
-    grid-column: span 2;
 }
 
 .message-to-send {
@@ -107,7 +135,9 @@ main {
     width: 100%;
     margin-bottom: 20px;
 }
-
+.settings {
+    grid-area: settings;
+}
 footer {
     grid-area: footer;
 }
@@ -115,22 +145,27 @@ footer {
 @media only screen and (min-width: 768px) {
     body {
         grid-template-areas: 
-        "header header"
-        "nav1 main"
-        "nav1 main"
-        "nav1 main"
-        "nav1 footer";
-        grid-template-columns:60px 1fr;
+        "header header header"
+        "nav1 main main"
+        "nav1 main main"
+        "nav1 main main"
+        "nav1 footer footer";
+        grid-template-columns:60px 1fr 1fr;
         grid-template-rows: 50px 1fr;
     }
     nav {
-        justify-self: start;
         grid-template-columns: 1fr;
-        height:100vh;
+        height: 100%;
         padding-top: 15px;
+        grid-template-rows: 200px 200px 200px 200px;
     }
+
     main {
         grid-template-columns: 1fr 1fr;
+    }
+    .traffic {
+        grid-column: span 2;
+
     }
     .message {
         grid-column: span 1;
