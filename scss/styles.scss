@@ -12,7 +12,7 @@ body {
   }
 
   header {
-      padding-bottom: 5px;
+    padding-bottom: 5px;
     background-color: rgb(137, 208, 255);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -32,7 +32,6 @@ body {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 10px;
-      
   }
 
   .bell {
@@ -56,7 +55,6 @@ body {
           transform: scale(1.2);
       }
   }
-
 
   header h3 {
       align-self: center;
@@ -99,7 +97,6 @@ main {
 }
 
 .message-to-send {
-    
     font-size: 1.1em;
 }
 
@@ -114,6 +111,7 @@ main {
 footer {
     grid-area: footer;
 }
+
 @media only screen and (min-width: 768px) {
     body {
         grid-template-areas: 
@@ -126,6 +124,7 @@ footer {
         grid-template-rows: 50px 1fr;
     }
     nav {
+        justify-self: start;
         grid-template-columns: 1fr;
         height:100vh;
         padding-top: 15px;
