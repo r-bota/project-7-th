@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  color: #4e4e4e;
+  color: #050505;
   font-family: "Roboto", sans-serif;
   display: grid;
   grid-template-areas: "header" "nav1" "main" "footer";
@@ -8,8 +8,9 @@ body {
 }
 
 header {
+  color: #ffe4bc;
   padding-bottom: 5px;
-  background-color: #89d0ff;
+  background-color: #f500ab;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 50px;
@@ -59,7 +60,7 @@ header h3 {
 
 nav {
   padding-top: 7px;
-  background-color: #3a4897;
+  background-color: #00d9ff;
   display: grid;
   grid-template-rows: 40px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -68,7 +69,7 @@ nav {
 }
 
 nav svg {
-  fill: white;
+  fill: black;
 }
 
 main {
@@ -83,8 +84,12 @@ main {
   grid-area: dashboard;
 }
 
-.search input {
+.search {
   grid-area: search;
+  width: 100%;
+}
+
+.search input {
   margin-top: 20px;
   font-size: 1.3rem;
 }
@@ -95,14 +100,29 @@ main {
 
 .traffic {
   grid-area: traffic;
+  height: 30%;
+  width: 80%;
+}
+.traffic ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  list-style: none;
+  justify-content: center;
+}
+.traffic ul li {
+  font-weight: bolder;
 }
 
 .daily {
   grid-area: daily;
+  height: 40%;
+  width: 80%;
 }
 
 .mobile {
   grid-area: mobile;
+  height: 40%;
+  width: 80%;
 }
 
 .message {
@@ -148,19 +168,23 @@ footer {
     grid-template-columns: 1fr;
     height: 100%;
     padding-top: 15px;
-    grid-template-rows: 200px 200px 200px 200px;
+    grid-template-rows: 100px 100px 100px 100px;
   }
 
   main {
     grid-template-columns: 1fr 1fr;
+    grid-template-areas: "dashboard search" "alert alert" "traffic traffic" "daily mobile" "settings settings";
   }
 
   .traffic {
-    grid-column: span 2;
+    position: relative;
+    width: 80%;
+    height: 40%;
   }
 
   .message {
-    grid-column: span 1;
+    grid-column: span 2;
+    width: 80%;
   }
 }
 
