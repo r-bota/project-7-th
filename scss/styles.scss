@@ -147,8 +147,9 @@ main {
 .facebook, 
 .instagram,
 .twitter {
+    background-color:rgb(245, 245, 245) ;
     width: 80vw;
-    border: solid 1px black;
+    border: solid 1px rgb(145, 145, 145);
     border-radius: 5px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -159,13 +160,26 @@ main {
        height: 80px; 
     }
     & h3 {
-        font-size: 1.5rem;
+        color: $pink;
+        font-size: 1.5em;
         margin: 0;
     }
     & p {
+        color:rgb(0, 217, 255);
         font-size: 4rem;
         margin: 0;
     }
+}
+
+.facebook svg {
+    fill:rgb(0, 86, 245);
+}
+
+.instagram svg {
+    fill:rgb(99, 99, 99);
+}
+.twitter svg {
+    fill: rgb(86, 153, 255);
 }
 .message {
     grid-area: message;
