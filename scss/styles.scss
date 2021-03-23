@@ -74,6 +74,7 @@ body {
     justify-items: center;
     grid-area: nav1;
   }
+
 nav svg {
     fill: rgb(0, 0, 0);
 }
@@ -95,13 +96,16 @@ main {
     "message message"
     "settings settings";
 }
+
 .dash {
     grid-area: dashboard;
 }
+
 .search {
     grid-area: search;
     width: 100%;
 }
+
 .search input {
     margin-top: 20px;
     font-size: 1.3rem;
@@ -116,15 +120,16 @@ main {
     grid-area: traffic;
     height: 30%;
     width: 80%;
-& ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    list-style: none;
-    justify-content: center;
-    & li {
-      font-weight: bolder;
-    }
-}
+
+        & ul {
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr 1fr;
+         list-style: none;
+         justify-content: center;
+        & li {
+         font-weight: bolder;
+           }
+      }
 }
 
 .daily {
