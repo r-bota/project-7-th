@@ -77,7 +77,7 @@ main {
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   grid-area: main;
-  grid-template-areas: "dashboard search" "alert alert" "traffic traffic" "daily daily" "mobile mobile" "social social" "message message" "settings settings";
+  grid-template-areas: "dashboard search" "alert alert" "traffic traffic" "daily daily" "mobile mobile" "social social" "members members" "activity activity" "message message" "settings settings";
 }
 
 .dash {
@@ -175,6 +175,35 @@ main {
 
 .twitter svg {
   fill: #5699ff;
+}
+
+.new-members {
+  grid-area: members;
+}
+.new-members p {
+  margin: 0;
+}
+.new-members div {
+  text-align: center;
+  border-bottom: solid 1px black;
+  padding-bottom: 15px;
+}
+.new-members a {
+  color: #00aeff;
+  text-decoration: none;
+}
+
+.elapsed {
+  color: #a5a5a5;
+  font-style: italic;
+}
+
+.recent-activity {
+  grid-area: activity;
+}
+.recent-activity div {
+  text-align: center;
+  border-bottom: solid 1px black;
 }
 
 .message {

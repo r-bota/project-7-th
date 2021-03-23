@@ -90,6 +90,8 @@ main {
     "daily daily"
     "mobile mobile"
     "social social"
+    "members members"
+    "activity activity"
     "message message"
     "settings settings";
 }
@@ -181,6 +183,36 @@ main {
 .twitter svg {
     fill: rgb(86, 153, 255);
 }
+
+.new-members {
+    grid-area: members;
+    
+    & p {
+        margin: 0;
+    }
+    & div {
+        text-align: center;
+        border-bottom: solid 1px black;
+        padding-bottom: 15px;
+    }
+    & a {
+        color:rgb(0, 174, 255);
+        text-decoration: none;
+    }
+}
+
+.elapsed {
+    color:rgb(165, 165, 165);
+    font-style: italic;
+}
+.recent-activity {
+    grid-area: activity;
+    & div {
+        text-align: center;
+        border-bottom: solid 1px black;
+    }
+}
+
 .message {
     grid-area: message;
     grid-column: span 2;
