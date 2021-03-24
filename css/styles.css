@@ -94,8 +94,13 @@ main {
   font-size: 1.3rem;
 }
 
-.alert {
+#alert {
   grid-area: alert;
+  text-align: center;
+  width: 80%;
+  border: solid 1px black;
+  border-radius: 4px;
+  background-color: #73ffbe;
 }
 
 .traffic {
@@ -185,6 +190,7 @@ main {
 
 .new-members {
   grid-area: members;
+  width: 80%;
 }
 .new-members p {
   margin: 0;
@@ -205,6 +211,7 @@ main {
 }
 
 .recent-activity {
+  width: 80%;
   grid-area: activity;
 }
 .recent-activity div {
