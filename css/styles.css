@@ -177,6 +177,12 @@ main {
   fill: #5699ff;
 }
 
+.profile-pic {
+  margin-top: 15px;
+  border-radius: 50%;
+  width: 90px;
+}
+
 .new-members {
   grid-area: members;
 }

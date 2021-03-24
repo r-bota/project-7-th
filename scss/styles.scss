@@ -189,8 +189,15 @@ main {
     fill: rgb(86, 153, 255);
 }
 
+.profile-pic {
+    margin-top: 15px;
+    border-radius: 50%;
+    width: 90px;
+}
+
 .new-members {
     grid-area: members;
+
     
     & p {
         margin: 0;
