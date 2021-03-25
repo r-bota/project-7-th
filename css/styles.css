@@ -1,4 +1,5 @@
 body {
+  max-width: 100vw;
   margin: 0;
   color: #050505;
   font-family: "Roboto", sans-serif;
@@ -73,6 +74,7 @@ nav svg {
 }
 
 main {
+  max-width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
@@ -101,6 +103,8 @@ main {
   border: solid 1px black;
   border-radius: 4px;
   background-color: #73ffbe;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .traffic {
@@ -267,13 +271,67 @@ footer {
 
   main {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "dashboard search" "alert alert" "traffic traffic" "daily mobile" "social social" "settings settings";
+    grid-template-areas: "dashboard search" "alert alert" "traffic traffic" "daily mobile" "social social" "members members" "activity activity" "settings settings";
   }
 
   .traffic {
     position: relative;
     width: 80%;
     height: 40%;
+  }
+
+  .social {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-template-areas: "socialheader socialheader socialheader" "fb insta twitter";
+  }
+  .social h3 {
+    grid-area: socialheader;
+  }
+  .social div {
+    display: grid;
+    grid-template-areas: "socialpic socialnetwork" "socialpic number";
+    width: auto;
+  }
+  .social div svg {
+    grid-area: socialpic;
+  }
+  .social div h3 {
+    grid-area: socialnetwork;
+  }
+  .social div p {
+    grid-area: number;
+    font-size: 2em;
+    align-self: flex-end;
+  }
+
+  .facebook {
+    grid-area: fb;
+  }
+
+  .instagram {
+    grid-area: insta;
+  }
+
+  .twitter {
+    grid-area: twitter;
+  }
+
+  .members {
+    display: grid;
+    grid-template-areas: "propic memname p" "propic a p";
+  }
+  .members .profile-pic {
+    grid-area: propic;
+  }
+  .members .members-name {
+    grid-area: memname;
+  }
+  .members a {
+    grid-area: a;
+  }
+  .members p {
+    grid-area: p;
   }
 
   .message {

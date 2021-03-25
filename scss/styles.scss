@@ -1,6 +1,7 @@
 $pink: rgb(245, 0, 171);
 
 body {
+    max-width: 100vw;
     margin: 0;
     color: rgb(5, 5, 5);
     font-family: 'Roboto', sans-serif;
@@ -14,6 +15,7 @@ body {
   }
 
   header {
+  
     color: rgb(255, 228, 188);
     padding-bottom: 5px;
     background-color: $pink;
@@ -80,6 +82,7 @@ nav svg {
 }
 
 main {
+    max-width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
@@ -119,6 +122,9 @@ main {
     border: solid 1px black;
     border-radius: 4px;
     background-color: rgb(115, 255, 190);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  
 }
 
 .traffic {
@@ -286,6 +292,8 @@ footer {
         "traffic traffic"
         "daily mobile"
         "social social"
+        "members members"
+        "activity activity"
         "settings settings";
     }
 
@@ -294,6 +302,67 @@ footer {
        width: 80%;
        height: 40%;
     }
+
+    .social {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-template-areas: 
+        "socialheader socialheader socialheader"
+        "fb insta twitter";
+        & h3 {
+            grid-area: socialheader;
+        }
+        & div {
+            display: grid;
+            grid-template-areas: 
+            "socialpic socialnetwork"
+            "socialpic number";
+            width: auto;
+            & svg {
+                grid-area: socialpic;
+            }
+            & h3 {
+                grid-area: socialnetwork;
+            }
+            & p {
+                grid-area: number;
+                font-size: 2em;
+                align-self:flex-end
+            }
+        }
+    }
+
+
+.facebook {
+    grid-area: fb;
+}
+.instagram {
+    grid-area: insta;
+}
+
+.twitter {
+    grid-area: twitter;
+}
+
+.members {
+    display: grid;
+    grid-template-areas: 
+    "propic memname p"
+    "propic a p";
+    & .profile-pic {
+        grid-area: propic;
+    }
+    & .members-name {
+        grid-area: memname;
+    }
+    & a {
+        grid-area: a;
+    }
+    & p {
+        grid-area: p;
+    }
+}
+
     .message {
         grid-column: span 2;
         width: 80%;

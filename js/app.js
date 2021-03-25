@@ -93,9 +93,16 @@ var doughnutChart = new Chart(mobile, {
 function createAlert() {
     const newAlert = document.createElement("p");
     const alertText = document.createTextNode("This is the alert!");
+    const exitButton = document.createElement("p");
+    exitButton.id = "exit-button";
+    const exitButtonText = document.createTextNode("X");
+    exitButton.appendChild(exitButtonText);
     newAlert.appendChild(alertText);
     myAlert.appendChild(newAlert);
+    myAlert.appendChild(exitButton);
 }
+
+var clickClose =  document.getElementById("exit-button");
 
 myAlert.addEventListener("click", function() {
     myAlert.style.display = "none";
