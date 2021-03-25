@@ -257,8 +257,8 @@ footer {
 
 @media only screen and (min-width: 768px) {
   body {
-    grid-template-areas: "header header header" "nav1 main main" "nav1 main main" "nav1 main main" "nav1 footer footer";
-    grid-template-columns: 60px 1fr 1fr;
+    grid-template-areas: "header header" "nav1 main" "nav1 main" "nav1 main" "nav1 footer";
+    grid-template-columns: 60px 1fr;
     grid-template-rows: 50px 1fr;
   }
 
@@ -325,12 +325,15 @@ footer {
     grid-area: propic;
   }
   .members .members-name {
+    align-self: center;
     grid-area: memname;
   }
   .members a {
+    align-self: center;
     grid-area: a;
   }
   .members p {
+    align-self: center;
     grid-area: p;
   }
 

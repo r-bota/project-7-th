@@ -269,12 +269,12 @@ footer {
 @media only screen and (min-width: 768px) {
     body {
         grid-template-areas: 
-        "header header header"
-        "nav1 main main"
-        "nav1 main main"
-        "nav1 main main"
-        "nav1 footer footer";
-        grid-template-columns:60px 1fr 1fr;
+        "header header"
+        "nav1 main"
+        "nav1 main"
+        "nav1 main"
+        "nav1 footer";
+        grid-template-columns:60px 1fr;
         grid-template-rows: 50px 1fr;
     }
     nav {
@@ -353,12 +353,15 @@ footer {
         grid-area: propic;
     }
     & .members-name {
+        align-self: center;
         grid-area: memname;
     }
     & a {
+        align-self: center;
         grid-area: a;
     }
     & p {
+        align-self: center;
         grid-area: p;
     }
 }
