@@ -213,7 +213,7 @@ main {
     & p {
         margin: 0;
     }
-    & div {
+    & .members {
         text-align: center;
         border-bottom: solid 1px black;
         padding-bottom: 15px;
@@ -347,23 +347,27 @@ footer {
 .members {
     display: grid;
     grid-template-areas: 
-    "propic memname p"
-    "propic a p";
-    & .profile-pic {
-        grid-area: propic;
-    }
-    & .members-name {
+    "memname p"
+    "memname p";
+
+    & .member-container {
         align-self: center;
         grid-area: memname;
+        display: grid;
+        grid-template-areas: "";
+        
     }
-    & a {
-        align-self: center;
-        grid-area: a;
-    }
+
     & p {
         align-self: center;
         grid-area: p;
     }
+}
+
+
+.activity {
+    display: grid;
+
 }
 
     .message {

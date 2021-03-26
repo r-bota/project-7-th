@@ -199,7 +199,7 @@ main {
 .new-members p {
   margin: 0;
 }
-.new-members div {
+.new-members .members {
   text-align: center;
   border-bottom: solid 1px black;
   padding-bottom: 15px;
@@ -319,22 +319,21 @@ footer {
 
   .members {
     display: grid;
-    grid-template-areas: "propic memname p" "propic a p";
+    grid-template-areas: "memname p" "memname p";
   }
-  .members .profile-pic {
-    grid-area: propic;
-  }
-  .members .members-name {
+  .members .member-container {
     align-self: center;
     grid-area: memname;
-  }
-  .members a {
-    align-self: center;
-    grid-area: a;
+    display: grid;
+    grid-template-areas: "";
   }
   .members p {
     align-self: center;
     grid-area: p;
+  }
+
+  .activity {
+    display: grid;
   }
 
   .message {
