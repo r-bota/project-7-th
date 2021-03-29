@@ -113,10 +113,10 @@ main {
   width: 80%;
 }
 .traffic ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  list-style: none;
-  justify-content: center;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  margin-right: 7%;
 }
 .traffic ul li {
   font-weight: bolder;
@@ -225,7 +225,6 @@ main {
 
 .message {
   grid-area: message;
-  grid-column: span 2;
 }
 
 .search-user {
@@ -234,17 +233,19 @@ main {
   width: 100%;
 }
 
-.message-to-send {
-  font-size: 1.1em;
-}
-
 .textarea {
   width: 100%;
+  font-size: 1.4em;
 }
 
 .send {
   width: 100%;
+  height: 30px;
   margin-bottom: 20px;
+  background-color: #f500ab;
+  color: white;
+  border: none;
+  border-radius: 5px;
 }
 
 .settings {
@@ -257,7 +258,7 @@ footer {
 
 @media only screen and (min-width: 768px) {
   body {
-    grid-template-areas: "header header" "nav1 main" "nav1 main" "nav1 main" "nav1 footer";
+    grid-template-areas: "header header" "nav1 main" "nav1 footer";
     grid-template-columns: 60px 1fr;
     grid-template-rows: 50px 1fr;
   }
@@ -271,7 +272,7 @@ footer {
 
   main {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "dashboard search" "alert alert" "traffic traffic" "daily mobile" "social social" "members members" "activity activity" "settings settings";
+    grid-template-areas: "dashboard search" "alert alert" "traffic traffic" "daily mobile" "social social" "members members" "activity activity" "message message" "settings settings";
   }
 
   .traffic {
@@ -363,10 +364,11 @@ footer {
   .elapsed {
     margin: 0;
   }
-
-  .message {
-    grid-column: span 2;
-    width: 80%;
+}
+@media only screen and (min-width: 1024px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "dashboard search" "alert alert" "traffic traffic" "daily mobile" "social social" "members activity" "message settings";
   }
 }
 
