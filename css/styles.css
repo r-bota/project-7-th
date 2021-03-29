@@ -370,6 +370,28 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "dashboard search" "alert alert" "traffic traffic" "daily mobile" "social social" "members activity" "message settings";
   }
+
+  .new-members {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    width: 100%;
+  }
+
+  .members,
+.activity {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  .recent-activity {
+    border-top: 1px solid black;
+    width: 100%;
+  }
+
+  .social {
+    width: 95%;
+    margin-bottom: 15px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

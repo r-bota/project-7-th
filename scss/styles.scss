@@ -394,7 +394,6 @@ footer {
 .elapsed {
     margin: 0;
 }
-  
 }
 
 @media only screen and (min-width: 1024px) {
@@ -408,5 +407,27 @@ footer {
         "social social"
         "members activity"
         "message settings";
+}
+
+.new-members {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    width: 100%;
+}
+
+.members,
+.activity {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.recent-activity {
+    border-top: 1px solid black;
+    width: 100%;
+}
+
+.social {
+    width: 95%;
+    margin-bottom: 15px;
 }
 }
