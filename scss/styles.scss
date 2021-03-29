@@ -231,7 +231,7 @@ main {
 .recent-activity {
     width: 80%;
     grid-area: activity;
-    & div {
+    & .activity {
         text-align: center;
         border-bottom: solid 1px black;
     }
@@ -346,30 +346,52 @@ footer {
 
 .members {
     display: grid;
+    grid-template-columns: 90px 1fr 1fr;
     grid-template-areas: 
-    "memname p"
-    "memname p";
-
-    & .member-container {
-        align-self: center;
-        grid-area: memname;
-        display: grid;
-        grid-template-areas: "";
-        
-    }
-
+    "pp mc p";
     & p {
         align-self: center;
         grid-area: p;
+        justify-self: end;
     }
 }
 
-
-.activity {
-    display: grid;
-
+.member-container {
+ grid-area: mc;
+ text-align: start;
+ align-self: center;
+ padding-left: 15px;
 }
 
+.profile-pic {
+    grid-area: pp;
+    
+}
+.activity {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    grid-template-areas: 
+    "pp ac";
+
+    & .profile-pic {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
+.action-container {
+    grid-area: ac;
+    justify-self: start;
+    align-self: center;
+    padding-left: 15px;
+}
+
+.member-action {
+    margin:0;
+}
+
+.elapsed {
+    margin: 0;
+}
     .message {
         grid-column: span 2;
         width: 80%;
