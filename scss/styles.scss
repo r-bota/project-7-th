@@ -1,4 +1,5 @@
 $pink: rgb(245, 0, 171);
+$border: rgb(175, 175, 175);
 
 body {
     max-width: 100vw;
@@ -88,7 +89,7 @@ main {
     justify-items: center;
     grid-area: main;
     grid-template-areas: 
-    "dashboard search"
+    "dashboard dashboard"
     "alert alert"
     "traffic traffic"
     "daily daily"
@@ -102,17 +103,18 @@ main {
 
 .dash {
     grid-area: dashboard;
-}
-
-.search {
-    grid-area: search;
+    width: 95%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    & h2 {
+        margin-right: 15px;
+    }
+& input {
     width: 100%;
-}
-
-.search input {
     margin-top: 20px;
     font-size: 1.3rem;
-    
+}
 }
 
 #alert {
@@ -122,9 +124,6 @@ main {
     border: solid 1px black;
     border-radius: 4px;
     background-color: rgb(115, 255, 190);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  
 }
 
 .traffic {
@@ -286,7 +285,7 @@ footer {
     main {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
-        "dashboard search"
+        "dashboard dashboard"
         "alert alert"
         "traffic traffic"
         "daily mobile"
@@ -400,7 +399,7 @@ footer {
     main {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
-        "dashboard search"
+        "dashboard dashboard"
         "alert alert"
         "traffic traffic"
         "daily mobile"
@@ -409,9 +408,17 @@ footer {
         "message settings";
 }
 
+#alert {
+    width: 95%;
+}
+
+.traffic {
+    width: 95%;
+}
+
 .new-members {
-    border-top: 1px solid black;
-    border-right: 1px solid black;
+    border-top: 2px solid $border;
+    border-right: 2px solid $border;
     width: 100%;
 }
 
@@ -422,12 +429,15 @@ footer {
 }
 
 .recent-activity {
-    border-top: 1px solid black;
+    border-top: 2px solid $border;
     width: 100%;
 }
 
 .social {
     width: 95%;
     margin-bottom: 15px;
+    & h3 {
+        margin-bottom: 0px;
+    }
 }
 }

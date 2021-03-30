@@ -58,7 +58,7 @@ let doughnutOptions = {
 const dailyData = {
     labels: ["S", "M", "T", "W", "T", "F", "S"], datasets: [{
         label: '# of Hits',
-        data: [75, 115, 175, 125, 225, 200, 100], backgroundColor: 'rgb(245, 0, 171)',
+        data: [75, 115, 175, 125, 225, 270, 100], backgroundColor: 'rgb(245, 0, 171)',
         borderWidth: 1
     }]
 };
@@ -87,19 +87,15 @@ var doughnutChart = new Chart(mobile, {
     type: 'doughnut',
     data: mobileData,
     options: doughnutOptions
-
 })
 
 function createAlert() {
     const newAlert = document.createElement("p");
     const alertText = document.createTextNode("This is the alert!");
-    const exitButton = document.createElement("p");
-    exitButton.id = "exit-button";
-    const exitButtonText = document.createTextNode("X");
-    exitButton.appendChild(exitButtonText);
+
     newAlert.appendChild(alertText);
     myAlert.appendChild(newAlert);
-    myAlert.appendChild(exitButton);
+
 }
 
 var clickClose =  document.getElementById("exit-button");

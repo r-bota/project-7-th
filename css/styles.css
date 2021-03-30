@@ -79,19 +79,21 @@ main {
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   grid-area: main;
-  grid-template-areas: "dashboard search" "alert alert" "traffic traffic" "daily daily" "mobile mobile" "social social" "members members" "activity activity" "message message" "settings settings";
+  grid-template-areas: "dashboard dashboard" "alert alert" "traffic traffic" "daily daily" "mobile mobile" "social social" "members members" "activity activity" "message message" "settings settings";
 }
 
 .dash {
   grid-area: dashboard;
+  width: 95%;
+  display: inline-flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
-
-.search {
-  grid-area: search;
+.dash h2 {
+  margin-right: 15px;
+}
+.dash input {
   width: 100%;
-}
-
-.search input {
   margin-top: 20px;
   font-size: 1.3rem;
 }
@@ -103,8 +105,6 @@ main {
   border: solid 1px black;
   border-radius: 4px;
   background-color: #73ffbe;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 
 .traffic {
@@ -272,7 +272,7 @@ footer {
 
   main {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "dashboard search" "alert alert" "traffic traffic" "daily mobile" "social social" "members members" "activity activity" "message message" "settings settings";
+    grid-template-areas: "dashboard dashboard" "alert alert" "traffic traffic" "daily mobile" "social social" "members members" "activity activity" "message message" "settings settings";
   }
 
   .traffic {
@@ -368,12 +368,20 @@ footer {
 @media only screen and (min-width: 1024px) {
   main {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "dashboard search" "alert alert" "traffic traffic" "daily mobile" "social social" "members activity" "message settings";
+    grid-template-areas: "dashboard dashboard" "alert alert" "traffic traffic" "daily mobile" "social social" "members activity" "message settings";
+  }
+
+  #alert {
+    width: 95%;
+  }
+
+  .traffic {
+    width: 95%;
   }
 
   .new-members {
-    border-top: 1px solid black;
-    border-right: 1px solid black;
+    border-top: 2px solid #afafaf;
+    border-right: 2px solid #afafaf;
     width: 100%;
   }
 
@@ -384,13 +392,16 @@ footer {
   }
 
   .recent-activity {
-    border-top: 1px solid black;
+    border-top: 2px solid #afafaf;
     width: 100%;
   }
 
   .social {
     width: 95%;
     margin-bottom: 15px;
+  }
+  .social h3 {
+    margin-bottom: 0px;
   }
 }
 
