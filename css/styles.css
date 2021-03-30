@@ -250,6 +250,30 @@ main {
 
 .settings {
   grid-area: settings;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  width: 95%;
+  margin-bottom: 20px;
+}
+.settings ul {
+  grid-column: 1/span 2;
+  list-style-type: none;
+}
+.settings button {
+  height: 40px;
+  color: white;
+}
+.settings .save-settings {
+  border: none;
+  border-radius: 5px;
+  background-color: #f500ab;
+  grid-column: 1/span 1;
+}
+.settings .cancel-settings {
+  border: none;
+  border-radius: 5px;
+  background-color: #c9c9c9;
 }
 
 footer {
@@ -364,6 +388,14 @@ footer {
   .elapsed {
     margin: 0;
   }
+
+  .message {
+    width: 80%;
+  }
+
+  .settings {
+    width: 80%;
+  }
 }
 @media only screen and (min-width: 1024px) {
   main {
@@ -385,8 +417,12 @@ footer {
     width: 100%;
   }
 
-  .members,
-.activity {
+  .members {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  .activity {
     margin-right: 15px;
     margin-left: 15px;
   }
@@ -402,6 +438,23 @@ footer {
   }
   .social h3 {
     margin-bottom: 0px;
+  }
+
+  .message {
+    width: 95%;
+  }
+
+  .settings {
+    width: 100%;
+    border-left: 2px solid #afafaf;
+  }
+
+  .save-settings {
+    margin-left: 10px;
+  }
+
+  .cancel-settings {
+    margin-right: 10px;
   }
 }
 

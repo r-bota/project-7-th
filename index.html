@@ -200,19 +200,31 @@
         <div class="message">
             <h2>Message user</h2>
             <form>
-            <input class="search-user" type="search" placeholder="Search for user">
-            <textarea class="textarea" rows=8></textarea>
-            <button class="send">Send</button>
+                <input class="search-user" type="search" placeholder="Search for user">
+                <textarea class="textarea" rows=8 placeholder="Message for user"></textarea>
+                <button class="send">Send</button>
             </form>
         </div>
 
         <div class="settings">
 
             <h2 id="settings">Settings</h2>
-            <label>Send Email Notifications</label>
-            <input type="checkbox">
-            <label>Set profile to private</label>
-            <input type="checkbox">
+            <ul>
+                <li>
+                    <label for="notification">Send Email Notifications</label>
+                    <input type="checkbox" id="notification">
+                </li>
+                <li>
+                    <label for="private">Set profile to private</label>
+                    <input type="checkbox" id="private">
+                </li>
+            </ul>
+            <select class="timezone">
+                <option disabled selected>Select timezone</option>
+                <option>PST</option>
+                <option>EST</option>
+            </select>
+
             <button class="save-settings">Save</button>
             <button class="cancel-settings">Cancel</button>
 

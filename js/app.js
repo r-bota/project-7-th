@@ -89,19 +89,12 @@ var doughnutChart = new Chart(mobile, {
     options: doughnutOptions
 })
 
-function createAlert() {
-    const newAlert = document.createElement("p");
-    const alertText = document.createTextNode("This is the alert!");
+myAlert.innerHTML = '<p>This is the alert</p> <p class="alert-close">x</p>'
 
-    newAlert.appendChild(alertText);
-    myAlert.appendChild(newAlert);
 
-}
-
-var clickClose =  document.getElementById("exit-button");
-
-myAlert.addEventListener("click", function() {
-    myAlert.style.display = "none";
+myAlert.addEventListener("click", e => {
+    const element = e.target;
+    if (element.classList.contains("alert-close")) {
+        myAlert.style.display = "none"
+    }
 })
-
-createAlert()

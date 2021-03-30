@@ -261,7 +261,32 @@ main {
 }
 .settings {
     grid-area: settings;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    width: 95%;
+    margin-bottom: 20px;
+    & ul {
+        grid-column: 1 / span 2;
+        list-style-type: none;
+    }
+    & button {
+        height: 40px;
+        color: white;
+    }
+    & .save-settings {
+        border: none;
+        border-radius: 5px;
+        background-color:$pink;
+        grid-column: 1 / span 1;
+    }
+    & .cancel-settings {
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(201, 201, 201);
+    }
 }
+
 footer {
     grid-area: footer;
 }
@@ -393,6 +418,13 @@ footer {
 .elapsed {
     margin: 0;
 }
+.message {
+    width: 80%;
+}
+.settings {
+    width: 80%
+ 
+}
 }
 
 @media only screen and (min-width: 1024px) {
@@ -422,7 +454,11 @@ footer {
     width: 100%;
 }
 
-.members,
+.members {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
 .activity {
     margin-right: 15px;
     margin-left: 15px;
@@ -439,5 +475,21 @@ footer {
     & h3 {
         margin-bottom: 0px;
     }
+}
+
+.message {
+    width: 95%;
+    
+}
+
+.settings {
+    width: 100%;
+    border-left: 2px solid $border;
+}
+.save-settings {
+    margin-left: 10px;
+}
+.cancel-settings {
+    margin-right: 10px;
 }
 }
