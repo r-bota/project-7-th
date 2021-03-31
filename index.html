@@ -79,7 +79,7 @@
 
         </div>
         <div class="traffic">
-            <h3>Traffic</h3>
+            <h3 class="div-header">Traffic</h3>
             <ul>
                 <li>Hourly</li>
                 <li>Daily</li>
@@ -89,15 +89,15 @@
             <canvas id="traffic-chart"></canvas>
         </div>
         <div class="daily">
-            <h3>Daily Traffic</h3>
+            <h3 class="div-header">Daily Traffic</h3>
             <canvas id="traffic-daily"></canvas>
         </div>
         <div class="mobile">
-            <h3>Mobile Users</h3>
+            <h3 class="div-header">Mobile Users</h3>
             <canvas id="traffic-mobile"></canvas>
         </div>
         <div class="social">
-            <h3>Social Stats</h3>
+            <h3 class="div-header">Social Stats</h3>
             <div class="facebook">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -125,7 +125,7 @@
         </div>
 
         <div class="new-members">
-            <h2>New Members</h2>
+            <h2 class="div-header">New Members</h2>
             <div class="members">
                 <img src="images/reimu.jpg" class="profile-pic">
                 <div class="member-container">
@@ -164,7 +164,7 @@
 
         </div>
         <div class="recent-activity">
-            <h2>Recent Activity</h2>
+            <h2 class="div-header">Recent Activity</h2>
             <div class="activity">
                 <img src="images/reimu.jpg" class="profile-pic">
                 <div class="action-container">
@@ -198,7 +198,7 @@
             </div>
         </div>
         <div class="message">
-            <h2>Message user</h2>
+            <h2 class="div-header">Message user</h2>
             <form>
                 <input class="search-user" type="search" placeholder="Search for user">
                 <textarea class="textarea" rows=8 placeholder="Message for user"></textarea>
@@ -208,7 +208,7 @@
 
         <div class="settings">
 
-            <h2 id="settings">Settings</h2>
+            <h2 class="div-header" id="settings">Settings</h2>
             <ul>
                 <li>
                     <label for="notification">Send Email Notifications</label>
@@ -219,15 +219,16 @@
                     <input type="checkbox" id="private">
                 </li>
             </ul>
-            <select class="timezone">
-                <option disabled selected>Select timezone</option>
-                <option>PST</option>
-                <option>EST</option>
-            </select>
+            <form>
+                <select class="timezone">
+                    <option disabled selected>Select timezone</option>
+                    <option>PST</option>
+                    <option>EST</option>
+                </select>
 
-            <button class="save-settings">Save</button>
-            <button class="cancel-settings">Cancel</button>
-
+                <button class="save-settings">Save</button>
+                <button class="cancel-settings">Cancel</button>
+            </form>
         </div>
 
     </main>

@@ -59,6 +59,10 @@ header h3 {
   color: white;
 }
 
+.div-header {
+  margin-left: 20px;
+}
+
 nav {
   padding-top: 7px;
   background-color: #00d9ff;
@@ -110,7 +114,7 @@ main {
 .traffic {
   grid-area: traffic;
   height: 30%;
-  width: 80%;
+  width: 100%;
 }
 .traffic ul {
   display: flex;
@@ -125,16 +129,23 @@ main {
 .daily {
   grid-area: daily;
   height: 40%;
-  width: 80%;
+  width: 100%;
+  border-top: 2px solid #afafaf;
 }
 
 .mobile {
+  border-top: 2px solid #afafaf;
   grid-area: mobile;
   height: 40%;
-  width: 80%;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .social {
+  width: 100%;
+  border-top: 2px solid #afafaf;
+  border-bottom: 2px solid #afafaf;
+  padding-bottom: 25px;
   grid-area: social;
   display: grid;
   grid-template-columns: 1fr;
@@ -144,8 +155,9 @@ main {
 .facebook,
 .instagram,
 .twitter {
+  margin: 0 auto;
   background-color: whitesmoke;
-  width: 80vw;
+  width: 90%;
   border: solid 1px #919191;
   border-radius: 5px;
   display: grid;
@@ -194,19 +206,26 @@ main {
 
 .new-members {
   grid-area: members;
-  width: 80%;
+  width: 100%;
 }
 .new-members p {
   margin: 0;
 }
-.new-members .members {
-  text-align: center;
-  border-bottom: solid 1px black;
-  padding-bottom: 15px;
-}
 .new-members a {
   color: #00aeff;
   text-decoration: none;
+}
+
+.members {
+  text-align: center;
+  border-bottom: solid 1px black;
+  padding-bottom: 15px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.members:last-child {
+  border: none;
 }
 
 .elapsed {
@@ -215,31 +234,53 @@ main {
 }
 
 .recent-activity {
-  width: 80%;
+  border-top: 2px solid #afafaf;
+  width: 100%;
   grid-area: activity;
 }
-.recent-activity .activity {
+
+.activity {
+  margin: 0 auto;
+  width: 90%;
   text-align: center;
   border-bottom: solid 1px black;
 }
 
+.activity:last-child {
+  border: none;
+}
+
 .message {
+  width: 100%;
+  border-top: solid 2px #afafaf;
   grid-area: message;
 }
 
 .search-user {
+  background-color: #f3f3f3;
+  border: 1px solid black;
+  border-radius: 3px;
+  display: block;
+  margin: auto;
   margin-bottom: 10px;
   font-size: 1.1em;
-  width: 100%;
+  width: 90%;
+  height: 40px;
 }
 
 .textarea {
-  width: 100%;
+  background-color: #f3f3f3;
+  display: block;
+  margin: auto;
+  width: 90%;
   font-size: 1.4em;
+  margin-bottom: 10px;
 }
 
 .send {
-  width: 100%;
+  display: block;
+  margin: auto;
+  width: 90%;
   height: 30px;
   margin-bottom: 20px;
   background-color: #f500ab;
@@ -249,31 +290,40 @@ main {
 }
 
 .settings {
+  border-top: solid 2px #afafaf;
   grid-area: settings;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-  width: 95%;
+  width: 100%;
   margin-bottom: 20px;
 }
 .settings ul {
-  grid-column: 1/span 2;
   list-style-type: none;
 }
 .settings button {
   height: 40px;
   color: white;
-}
-.settings .save-settings {
   border: none;
   border-radius: 5px;
+  margin: 25px auto;
+  width: 80%;
+}
+.settings form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.save-settings {
   background-color: #f500ab;
-  grid-column: 1/span 1;
 }
-.settings .cancel-settings {
-  border: none;
-  border-radius: 5px;
+
+.cancel-settings {
   background-color: #c9c9c9;
+}
+
+.timezone {
+  grid-column: 1/span 2;
+  height: 40px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 footer {
@@ -305,6 +355,19 @@ footer {
     height: 40%;
   }
 
+  .daily {
+    width: 100%;
+    height: 100%;
+    border-right: 2px solid #afafaf;
+    border-bottom: 2px solid #afafaf;
+  }
+
+  .mobile {
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid #afafaf;
+  }
+
   .social {
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 10px;
@@ -316,7 +379,6 @@ footer {
   .social div {
     display: grid;
     grid-template-areas: "socialpic socialnetwork" "socialpic number";
-    width: auto;
   }
   .social div svg {
     grid-area: socialpic;
@@ -388,14 +450,6 @@ footer {
   .elapsed {
     margin: 0;
   }
-
-  .message {
-    width: 80%;
-  }
-
-  .settings {
-    width: 80%;
-  }
 }
 @media only screen and (min-width: 1024px) {
   main {
@@ -433,15 +487,12 @@ footer {
   }
 
   .social {
+    border: none;
     width: 95%;
     margin-bottom: 15px;
   }
   .social h3 {
     margin-bottom: 0px;
-  }
-
-  .message {
-    width: 95%;
   }
 
   .settings {
