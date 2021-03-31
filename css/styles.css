@@ -105,10 +105,13 @@ main {
 #alert {
   grid-area: alert;
   text-align: center;
-  width: 80%;
+  width: 90%;
   border: solid 1px black;
   border-radius: 4px;
   background-color: #73ffbe;
+  display: inline-flex;
+  justify-content: space-between;
+  padding: 0 10px 0 10px;
 }
 
 .traffic {
@@ -124,6 +127,13 @@ main {
 }
 .traffic ul li {
   font-weight: bolder;
+}
+
+#selected-time {
+  background-color: #75e07e;
+  border-radius: 3px;
+  padding: 4px;
+  color: white;
 }
 
 .daily {

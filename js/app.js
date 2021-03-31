@@ -89,8 +89,7 @@ var doughnutChart = new Chart(mobile, {
     options: doughnutOptions
 })
 
-myAlert.innerHTML = '<p>This is the alert</p> <p class="alert-close">x</p>'
-
+myAlert.innerHTML = '<p>This is the alert</p> <p class="alert-close">X</p>'
 
 myAlert.addEventListener("click", e => {
     const element = e.target;

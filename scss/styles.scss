@@ -124,10 +124,13 @@ main {
 #alert {
     grid-area: alert;
     text-align: center;
-    width: 80%;
+    width: 90%;
     border: solid 1px black;
     border-radius: 4px;
     background-color: rgb(115, 255, 190);
+    display: inline-flex;
+    justify-content: space-between;
+    padding:0 10px 0 10px;
 }
 
 .traffic {
@@ -144,7 +147,12 @@ main {
            }
       }
 }
-
+#selected-time {
+    background-color: rgb(117, 224, 126);
+    border-radius: 3px;
+    padding: 4px;
+    color: white;
+}
 .daily {
     grid-area: daily;
     height: 40%;
