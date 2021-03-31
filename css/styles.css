@@ -307,6 +307,8 @@ main {
 }
 .settings ul {
   list-style-type: none;
+  overflow: hidden;
+  display: inline-block;
 }
 .settings button {
   height: 40px;
@@ -319,6 +321,18 @@ main {
 .settings form {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.inlinetest {
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.this {
+  width: 70px;
+  float: right;
+  margin-left: 40px;
+  margin-top: -5px;
 }
 
 .save-settings {
