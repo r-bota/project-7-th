@@ -32,15 +32,8 @@ header h1 {
   column-gap: 10px;
 }
 
-.bell {
-  align-self: center;
-  height: 35px;
-  width: 35px;
-  fill: white;
-  transition: 0.3s ease-out;
-}
-.bell:hover {
-  transform: scale(1.2);
+.thebell {
+  width: 40px;
 }
 
 .pro-pic {

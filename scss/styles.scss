@@ -40,15 +40,19 @@ body {
       column-gap: 10px;
   }
 
-  .bell {
-    align-self: center;
-    height: 35px;
-    width: 35px;
-    fill: white;
-    transition: .3s ease-out;
-    &:hover {
-        transform: scale(1.2);
-    }
+// .bell {
+//     align-self: center;
+//     height: 35px;
+//     width: 35px;
+//     fill: white;
+//     transition: .3s ease-out;
+//     &:hover {
+//         transform: scale(1.2);
+//     }
+// }
+
+.thebell {
+    width: 40px;
 }
 
   .pro-pic {
@@ -312,9 +316,10 @@ main {
     grid-area: settings;
     width: 100%;
     margin-bottom: 20px;
+
     & ul {
         list-style-type: none;
-        overflow:hidden;
+        overflow: hidden;
         display: inline-block;
     } 
 
