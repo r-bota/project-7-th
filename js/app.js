@@ -12,7 +12,8 @@ let trafficData = {
     }]
 };
 let lineOptions = {
-    aspectRatio: 2.5, animation: {
+    responsive: true,
+    animation: {
         duration: 0
     },
     scales: {
@@ -28,7 +29,8 @@ let lineOptions = {
 };
 
 let barOptions = {
-    aspectRatio: 2.5, animation: {
+    responsive: true,
+    animation: {
         duration: 0
     },
     scales: {
@@ -44,8 +46,8 @@ let barOptions = {
 };
 
 let doughnutOptions = {
-
-    aspectRatio: 2.5, animation: {
+    responsive: true,
+     animation: {
         duration: 0
     },
     legend: {
