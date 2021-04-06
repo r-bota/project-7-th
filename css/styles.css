@@ -196,11 +196,7 @@ main {
 }
 
 .facebook svg {
-  fill: #0056f5;
-}
-
-.instagram svg {
-  fill: #636363;
+  fill: #0059ff;
 }
 
 .twitter svg {
@@ -257,6 +253,10 @@ main {
 
 .activity:last-child {
   border: none;
+}
+
+.arrow {
+  display: none;
 }
 
 .message {
@@ -447,12 +447,20 @@ footer {
 
   .activity {
     display: grid;
-    grid-template-columns: 90px 1fr;
-    grid-template-areas: "pp ac";
+    grid-template-columns: 90px 1fr 1fr;
+    grid-template-areas: "pp ac arrow";
   }
   .activity .profile-pic {
     margin-top: 15px;
     margin-bottom: 15px;
+  }
+
+  .arrow {
+    font-size: 1.5em;
+    display: inline-block;
+    align-self: center;
+    grid-area: arrow;
+    justify-self: end;
   }
 
   .action-container {

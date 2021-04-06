@@ -2,6 +2,10 @@ var traffic = document.getElementById("traffic-chart");
 var daily = document.getElementById("traffic-daily");
 var mobile = document.getElementById("traffic-mobile");
 var myAlert = document.getElementById("alert");
+var sendBtn = document.getElementById("jscheck");
+var uSearch = document.getElementById("usearch");
+var uMessage = document.getElementById("umessage");
+
 let trafficData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
         "4-10", "11-17", "18-24", "25-31"],
@@ -47,7 +51,7 @@ let barOptions = {
 
 let doughnutOptions = {
     responsive: true,
-     animation: {
+    animation: {
         duration: 0
     },
     legend: {
@@ -97,5 +101,17 @@ myAlert.addEventListener("click", e => {
     const element = e.target;
     if (element.classList.contains("alert-close")) {
         myAlert.style.display = "none"
+    }
+})
+
+sendBtn.addEventListener("click", function () {
+    if (uSearch.value === "" && uMessage.value === "") {
+        alert("Please fill out user and message fields before sending");
+    } else if (uSearch.value === "") {
+        alert("Please fill out user field before sending");
+    } else if (uMessage.value === "") {
+        alert("Please fill out message field before sending");
+    } else {
+        alert(`Message successfully sent to: ${uSearch.value}`);
     }
 })

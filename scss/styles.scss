@@ -210,12 +210,9 @@ main {
 }
 
 .facebook svg {
-    fill:rgb(0, 86, 245);
+    fill:rgb(0, 89, 255);
 }
 
-.instagram svg {
-    fill:rgb(99, 99, 99);
-}
 .twitter svg {
     fill: rgb(86, 153, 255);
 }
@@ -271,6 +268,10 @@ main {
     border: none;
 }
 
+.arrow {
+    display: none;
+}
+
 .message {
     width: 100%;
     border-top: solid 2px $border;
@@ -308,6 +309,7 @@ main {
     border: none;
     border-radius: 5px;
 }
+
 .settings {
     border-top: solid 2px $border;
     grid-area: settings;
@@ -478,16 +480,23 @@ footer {
 
 .activity {
     display: grid;
-    grid-template-columns: 90px 1fr;
+    grid-template-columns: 90px 1fr 1fr;
     grid-template-areas: 
-    "pp ac";
+    "pp ac arrow";
 
     & .profile-pic {
         margin-top: 15px;
         margin-bottom: 15px;
     }
 }
-
+.arrow {
+        font-size: 1.5em;
+        display: inline-block;
+        align-self: center;
+        grid-area: arrow;
+        justify-self: end;
+    
+}
 .action-container {
     grid-area: ac;
     justify-self: start;
